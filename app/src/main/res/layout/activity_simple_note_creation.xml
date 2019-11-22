@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/cardview_dark_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/footer2"
+        android:layout_above="@+id/scroll"
+        android:background="@color/cardview_dark_background"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:stretchColumns="0" >
+
+        <TableRow
+            android:id="@+id/firstRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="10dp"
+                android:paddingEnd="140dp"
+                android:onClick="ReturnPresssed"
+
+                android:src="@drawable/baseline_arrow_back_ios_24"
+
+                />
+
+            <ImageButton
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="12dp"
+                android:src="@drawable/baseline_create_24"
+                android:paddingRight="20dp"
+
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/archieve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="12dp"
+                android:src="@drawable/baseline_add_alarm_24"
+                android:paddingRight="20dp"
+
+
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="12dp"
+                android:src="@drawable/baseline_archive_24"
+                android:paddingRight="20dp"
+
+                />
+
+
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="540dp"
+          android:layout_above="@+id/bottom_toolbar"
+
+            android:fillViewport="true"
+            android:paddingTop="5dp"
+
+
+          >
+
+            <LinearLayout
+                android:id="@+id/simple_note_creation_linear_layout"
+                android:background="@color/cardview_dark_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_toolbar"
+                android:orientation="vertical"
+
+                >
+
+
+
+            <TextView
+                android:id="@+id/big_title"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Top 100 Movies"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:textIsSelectable="true"
+
+                />
+
+
+            <TextView
+                android:id="@+id/big_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="25dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto_slab_regular"
+                android:text="1-sdfjdskfjdskfasd\n2-sdfjkasdjfkdjfs\n3-asfkjwkdsjflaw"
+                android:textColor="#FFFFFF"
+                android:textIsSelectable="true"
+
+
+
+                />
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/bottom_toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/colorAppBackground"
+        android:stretchColumns="1" >
+
+        <TableRow
+
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp"
+            tools:ignore="UselessParent"
+            android:background="@color/cardview_dark_background">
+
+            <ImageButton
+                android:id="@+id/note_types_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/round_add_circle_24"
+                android:contentDescription="@string/note_types" />
+
+            <TextView
+                android:id="@+id/last_modification_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorHint"
+                android:fontFamily="@font/roboto_slab_regular"
+                android:background="?android:attr/selectableItemBackground"
+                android:textSize="13dp"
+                android:text="Edited May 4" />
+
+            <ImageButton
+                android:id="@+id/note_actions_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/round_delete_24"
+                android:contentDescription="@string/note_actions" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
